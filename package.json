@@ -1,0 +1,25 @@
+{
+  "name": "security",
+  "version": "1.0.0",
+  "description": "Application to track campus security data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnionTTC/security.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UnionTTC/security/issues"
+  },
+  "homepage": "https://github.com/UnionTTC/security#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "mongoose": "^4.4.0"
+  }
+}
