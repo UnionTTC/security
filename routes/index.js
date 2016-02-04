@@ -6,3 +6,9 @@ router.get('/', function (req, res) {
 		title: 'Thing!'
 	})
 })
+
+router.get('/diff', function (req, res) {
+	res.render('index', {
+		title: 'different'
+	})
+})

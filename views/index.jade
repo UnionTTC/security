@@ -2,4 +2,9 @@ extends layout
 
 block content
   h1 #{sitename}
-  p Welcome to the site!
+  p Welcome to the site! This is the #{title} page.
+  p
+    a(href='#{source_url}') Fork me on GitHub!
+  ul
+    each val in [1, 2, 3, 4, 5]
+      li= val

@@ -4,6 +4,12 @@ html(lang='en')
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title #{sitename}
+    link(rel="stylesheet" type="text/css" href="/css/bootstrap.paper.min.css")
     link(rel="stylesheet" type="text/css" href="/css/style.css")
   body
-    block content
+    #wrapper
+      #header
+        include partials/header
+      #body
+        block content
+      #footer
