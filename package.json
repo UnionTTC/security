@@ -4,7 +4,7 @@
   "description": "Application to track campus security data",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "standard server.js && standard routes/*",
     "start": "node server.js"
   },
   "repository": {
@@ -21,5 +21,8 @@
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "mongoose": "^4.4.0"
+  },
+  "devDependencies": {
+    "standard": "^5.4.1"
   }
 }
