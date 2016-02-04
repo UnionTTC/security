@@ -1,14 +1,14 @@
-nav.navbar.navbar-default
-  .container-fluid
+nav.navbar.navbar-default.navbar-fixed-top
+  .container
     .navbar-header
       button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false')
         span.sr-only Toggle navigation
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='#') Brand
+      a.navbar-brand(href='#') #{sitename}
 
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    #navbar-collapse.collapse.navbar-collapse
       ul.nav.navbar-nav
         li.active
           a(href='#') Link
@@ -16,7 +16,8 @@ nav.navbar.navbar-default
         li
           a(href='#') Link
         li.dropdown
-          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Dropdown V
+          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Dropdown 
+            i.fa.fa-caret-down
             ul.dropdown-menu
               li
                 a(href='#') Action
@@ -24,10 +25,29 @@ nav.navbar.navbar-default
                 a(href='#') Another action
               li
                 a(href='#') Something else here
-              li(role='separator')
+              li.divider(role='separator')
               li
                 a(href='#') Separated link
-              li(role='separator')
+              li.divider(role='separator')
               li
                 a(href='#') One more separated link
-                
+      form.navbar-form.navbar-left(role='search')
+        .form-group
+          input.form-control(type='text', placeholder='Search')
+        button.btn.btn-default(type='submit') Submit
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#') Link
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button' aria-haspopup='true' aria-expanded='false') Dropdown 
+            i.fa.fa-caret-down
+          ul.dropdown-menu
+            li
+              a(href='#') Action
+            li
+              a(href='#') Another action
+            li
+              a(href='#') Something else here
+            li.divider(role='separator')
+            li
+              a(href='#') Separated link
