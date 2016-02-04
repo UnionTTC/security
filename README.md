@@ -1,6 +1,7 @@
 # Security
 
 [![Build Status](https://travis-ci.org/UnionTTC/security.svg?branch=master)](https://travis-ci.org/UnionTTC/security)
+![Dependency Status](https://david-dm.org/UnionTTC/security.svg)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 [![Join the chat at https://gitter.im/UnionTTC/security](https://badges.gitter.im/UnionTTC/security.svg)](https://gitter.im/UnionTTC/security?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
