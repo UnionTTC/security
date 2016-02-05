@@ -1,12 +1,7 @@
 var mongoose = require('mongoose')
 
-var enu = {
-  values: 'victim witness suspect other'.split(' '),
-  message: 'enum validator failed for path `{PATH}` with value `{VALUE}`'
-}
-
 var incidentSchema = new mongoose.Schema({
-  team: String,
+  team: [String],
   date: String,
   time: String,
   location: String,
@@ -28,7 +23,12 @@ var incidentSchema = new mongoose.Schema({
   person: [{
     state: {
       type: String,
-      enum: enu
+      validate: {
+        validator: function (v) {
+          return /[victim]|[witness]|[suspect]|[other]/.test(v)
+        },
+        message: 'Validator failed for path `{PATH}` with value `{VALUE}`'
+      }
     },
     name: String,
     address: String,
