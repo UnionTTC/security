@@ -14,3 +14,4 @@ Application to track campus security data
 * [Jade](https://github.com/pugjs/jade#readme)
 * [Bootstrap](https://getbootstrap.com)
 * [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+* [Mongoose](http://mongoosejs.com/)
