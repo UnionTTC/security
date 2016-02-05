@@ -1,15 +1,18 @@
 body {
   padding-top: 70px;
+  font-size: 18px;
 }
 #wrapper {
   width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
-.formField {
-  padding-bottom: 20px;
-}
 
 .floatRight {
   float: right;
+}
+
+.formField {
+  margin-left: 5px;
+  margin-right: 5px;
 }

@@ -1,17 +1,21 @@
 extends layout
 
 block content
-  h1 #{sitename}
-  h2 #{title}
-  h3 Q1
-
-  form(action="/")       
-    div.input-group.formField
-      span#form1field1.input-group-addon Field 1
-      input.form-control(placeholder="Field 1" aria-describedby="form1field1")
-    div.input-group.formField
-      span#form1field2.input-group-addon Field 2
-      input.form-control(placeholder="Field 2" aria-describedby="form2field2")
-      span.input-group-addon Ends Here
-    div.input-group.formField.floatRight
+  h3 #{title}
+  form.form-horizontal(action="/")     
+    div.form-group
+      label.col-sm-2.control-label(for="employeeInfo") Employee Info:
+      div.col-sm-10.form-inline
+          input#employeeInfo.form-control.formField(placeholder="First Name")
+          input.form-control.formField(placeholder="Last Name")
+    div.form-group
+      label.col-sm-2.control-label(for="studentInfo") Student Info:
+      div.col-sm-10.form-inline
+          input#studentInfo.form-control.formField(placeholder="First Name")
+          input.form-control.formField(placeholder="Last Name")
+    div.form-group
+      label.col-sm-2.control-label(for="longline") Longline:
+      div.col-sm-10.form-inline
+        input#longline.form-control.formField(placeholder="longline")
+    div.form-group.floatRight
       input.btn(type="submit" value="Submit")
