@@ -1,14 +1,14 @@
 nav.navbar.navbar-default.navbar-fixed-top
   .container
     .navbar-header
-      button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false')
+      button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-collapse' aria-expanded='false')
         span.sr-only Toggle navigation
         span.icon-bar
         span.icon-bar
         span.icon-bar
       ul.nav.navbar-nav
         li.active
-          a.navbar-brand(href='#') #{sitename}
+          a.navbar-brand(href='/') #{sitename}
             span.sr-only (current)
 
     #navbar-collapse.collapse.navbar-collapse
@@ -30,9 +30,9 @@ nav.navbar.navbar-default.navbar-fixed-top
               li
                 a(href='/other-report') Other Form
         li
-          a(href='#') Submitted Forms
+          a(href='/submitted-forms') Submitted Forms
         li
-          a(href='#') Door Check
+          a(href='/door-check') Door Check
       form.navbar-form.navbar-left(role='search')
         .form-group
           input.form-control(type='text', placeholder='Search')
@@ -42,5 +42,5 @@ nav.navbar.navbar-default.navbar-fixed-top
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button' aria-haspopup='true' aria-expanded='false') #{username}
             i.fa.fa-caret-down
           ul.dropdown-menu
-            li
+            li.disabled
               a(href='#') Log Out

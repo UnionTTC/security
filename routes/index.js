@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
 })
 
 router.get('/form1', function (req, res) {
-  res.render('index', {
+  res.render('form1', {
     title: '1st Form',
     username: 'temp - no user'
   })
@@ -32,6 +32,20 @@ router.get('/form3', function (req, res) {
 router.get('/incident-report', function (req, res) {
   res.render('index', {
     title: 'Incident Report',
+    username: 'temp - no user'
+  })
+})
+
+router.get('/submitted-forms', function (req, res) {
+  res.render('index', {
+    title: 'Submitted Forms',
+    username: 'temp - no user'
+  })
+})
+
+router.get('/door-check', function (req, res) {
+  res.render('index', {
+    title: 'Door Check',
     username: 'temp - no user'
   })
 })

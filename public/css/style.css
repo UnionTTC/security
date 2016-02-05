@@ -6,3 +6,10 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.formField {
+  padding-bottom: 20px;
+}
+
+.floatRight {
+  float: right;
+}
