@@ -6,48 +6,41 @@ nav.navbar.navbar-default.navbar-fixed-top
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='#') #{sitename}
+      ul.nav.navbar-nav
+        li.active
+          a.navbar-brand(href='#') #{sitename}
+            span.sr-only (current)
 
     #navbar-collapse.collapse.navbar-collapse
       ul.nav.navbar-nav
-        li.active
-          a(href='#') Link
-            span.sr-only (current)
-        li
-          a(href='#') Link
         li.dropdown
-          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Dropdown 
+          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Forms 
             i.fa.fa-caret-down
             ul.dropdown-menu
               li
-                a(href='#') Action
+                a(href='/form1') Security Form 1
               li
-                a(href='#') Another action
+                a(href='/form2') Security Form 2
               li
-                a(href='#') Something else here
+                a(href='/form3') Security Form 3
               li.divider(role='separator')
               li
-                a(href='#') Separated link
+                a(href='/incident-report') Incident Report
               li.divider(role='separator')
               li
-                a(href='#') One more separated link
+                a(href='/other-report') Other Form
+        li
+          a(href='#') Submitted Forms
+        li
+          a(href='#') Door Check
       form.navbar-form.navbar-left(role='search')
         .form-group
           input.form-control(type='text', placeholder='Search')
         button.btn.btn-default(type='submit') Submit
       ul.nav.navbar-nav.navbar-right
-        li
-          a(href='#') Link
         li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button' aria-haspopup='true' aria-expanded='false') Dropdown 
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button' aria-haspopup='true' aria-expanded='false') #{username}
             i.fa.fa-caret-down
           ul.dropdown-menu
             li
-              a(href='#') Action
-            li
-              a(href='#') Another action
-            li
-              a(href='#') Something else here
-            li.divider(role='separator')
-            li
-              a(href='#') Separated link
+              a(href='#') Log Out
