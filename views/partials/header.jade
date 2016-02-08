@@ -33,19 +33,21 @@ nav.navbar.navbar-default.navbar-fixed-top
           a(href='/your-forms') Your Submitted Forms
         li
           a(href='/door-check') Door Check
-        li.dropdown
-          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button') Admin Tasks 
-            i.fa.fa-caret-down
-            ul.dropdown-menu
-              li
-                a(href='/door-management') Door Management
-              li
-                a(href='/form-management') Form Management
       form.navbar-form.navbar-left(role='search')
         .form-group
           input.form-control(type='text', placeholder='Search')
         button.btn.btn-default(type='submit') Submit
       ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button') Admin Tasks 
+            i.fa.fa-caret-down
+            ul.dropdown-menu
+              li
+                a(href='/form-management') Form Management
+              li
+                a(href='/door-management') Door Management
+              li
+                a(href='/user-management') User Management
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button') #{username} 
             i.fa.fa-caret-down

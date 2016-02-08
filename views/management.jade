@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h3 #{title}
+  .btn-group-vertical(role='group')
+    if managementRel == 'forms'
+      button.btn.disabled(type='button') Form Management
+      a.btn.btn-default(role='button' href='/door-management') Door Management
+      a.btn.btn-default(role='button' href='/user-management') User Management
+    if managementRel == 'doors'
+      a.btn.btn-default(role='button' href='/form-management') Form Management
+      button.btn.disabled(type='button') Door Management
+      a.btn.btn-default(role='button' href='/user-management') User Management
+    if managementRel == 'users'
+      a.btn.btn-default(role='button' href='/form-management') Form Management
+      a.btn.btn-default(role='button' href='/door-management') Door Management
+      button.btn.disabled(type='button') User Management

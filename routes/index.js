@@ -57,16 +57,26 @@ router.get('/other-report', function (req, res) {
   })
 })
 
-router.get('/form-management', function (req, res) {
-  res.render('index', {
-    title: 'Form Management',
-    username: 'temp - no user'
+router.get('/door-management', function (req, res) {
+  res.render('management', {
+    title: 'Door Management',
+    username: 'temp - no user',
+    managementRel: 'doors'
   })
 })
 
-router.get('/door-management', function (req, res) {
-  res.render('index', {
-    title: 'Door Management',
-    username: 'temp - no user'
+router.get('/form-management', function (req, res) {
+  res.render('management', {
+    title: 'Form Management',
+    username: 'temp - no user',
+    managementRel: 'forms'
+  })
+})
+
+router.get('/user-management', function (req, res) {
+  res.render('management', {
+    title: 'User Management',
+    username: 'temp - no user',
+    managementRel: 'users'
   })
 })
