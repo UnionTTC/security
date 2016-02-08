@@ -36,7 +36,7 @@ router.get('/incident-report', function (req, res) {
   })
 })
 
-router.get('/submitted-forms', function (req, res) {
+router.get('/your-forms', function (req, res) {
   res.render('index', {
     title: 'Submitted Forms',
     username: 'temp - no user'

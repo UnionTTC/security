@@ -30,16 +30,26 @@ nav.navbar.navbar-default.navbar-fixed-top
               li
                 a(href='/other-report') Other Form
         li
-          a(href='/submitted-forms') Submitted Forms
+          a(href='/your-forms') Submitted Forms
         li
           a(href='/door-check') Door Check
+        li.dropdown
+          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button') Admin Tasks 
+            i.fa.fa-caret-down
+              ul.dropdown-menu
+                li
+                  a(href='/edit-forms') Edit Forms
+                li
+                  a(href='/view-submitted-forms') View All Submitted Forms
+                li
+                  a(href='/door-records') View Door Check Records
       form.navbar-form.navbar-left(role='search')
         .form-group
           input.form-control(type='text', placeholder='Search')
         button.btn.btn-default(type='submit') Submit
       ul.nav.navbar-nav.navbar-right
         li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button' aria-haspopup='true' aria-expanded='false') #{username}
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button') #{username} 
             i.fa.fa-caret-down
           ul.dropdown-menu
             li.disabled
