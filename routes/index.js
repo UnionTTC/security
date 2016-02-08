@@ -56,3 +56,17 @@ router.get('/other-report', function (req, res) {
     username: 'temp - no user'
   })
 })
+
+router.get('/form-management', function (req, res) {
+  res.render('index', {
+    title: 'Form Management',
+    username: 'temp - no user'
+  })
+})
+
+router.get('/door-management', function (req, res) {
+  res.render('index', {
+    title: 'Door Management',
+    username: 'temp - no user'
+  })
+})
