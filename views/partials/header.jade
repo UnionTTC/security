@@ -1,46 +1,92 @@
 nav.navbar.navbar-default.navbar-fixed-top
-  .container
-    .navbar-header
-      button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-collapse' aria-expanded='false')
+  .container-fluid
+    .col-md-1
+    .navbar-header.col-md-1
+      button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-collapse')
         span.sr-only Toggle navigation
         span.icon-bar
         span.icon-bar
         span.icon-bar
       ul.nav.navbar-nav
         li.active
-          a.navbar-brand(href='#') #{sitename}
+          a.navbar-brand(href='/') #{sitename}
             span.sr-only (current)
 
-    #navbar-collapse.collapse.navbar-collapse
+    #navbar-collapse.collapse.navbar-collapse.col-md-9
       ul.nav.navbar-nav
         li.dropdown
-          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Forms 
+          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
+            i.fa.fa-file-text-o.fa-fw
+            |Forms 
             i.fa.fa-caret-down
             ul.dropdown-menu
               li
-                a(href='/form1') Security Form 1
+                a(href='/form1')
+                  i.fa.fa-file-o.fa-fw
+                  |  Security Form 1
               li
-                a(href='/form2') Security Form 2
+                a(href='/form2')
+                  i.fa.fa-file-o.fa-fw
+                  |  Security Form 2
               li
-                a(href='/form3') Security Form 3
+                a(href='/form3')
+                  i.fa.fa-file-o.fa-fw
+                  |  Security Form 3
               li.divider(role='separator')
               li
-                a(href='/incident-report') Incident Report
+                a(href='/incident-report')
+                  i.fa.fa-file-o.fa-fw
+                  |  Incident Report
               li.divider(role='separator')
               li
-                a(href='/other-report') Other Form
+                a(href='/other-report')
+                  i.fa.fa-file-o.fa-fw
+                  |  Other Form
         li
-          a(href='#') Submitted Forms
+          a(href='/your-forms')
+            i.fa.fa-file-o.fa-fw
+            |Your Submissions
         li
-          a(href='#') Door Check
+          a(href='/door-check')
+            i.fa.fa-building-o.fa-fw
+            |Door Check
       form.navbar-form.navbar-left(role='search')
         .form-group
+          span.form-group-addon
+            i.fa.fa-search.fa-fw
           input.form-control(type='text', placeholder='Search')
-        button.btn.btn-default(type='submit') Submit
+        button.btn.btn-default(type='submit') Search
       ul.nav.navbar-nav.navbar-right
         li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button' aria-haspopup='true' aria-expanded='false') #{username}
+          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button')
+            i.fa.fa-wrench.fa-fw
+            |Admin 
+            i.fa.fa-caret-down
+            ul.dropdown-menu
+              li
+                a(href='/form-management')
+                  i.fa.fa-file-text.fa-fw
+                  |  Manage Forms
+              li
+                a(href='/door-management')
+                  i.fa.fa-building.fa-fw
+                  |  Manage Doors
+              li
+                a(href='/user-management')
+                  i.fa.fa-users.fa-fw
+                  |  Manage Users
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button')
+            i.fa.fa-user.fa-fw
+            |#{username} 
             i.fa.fa-caret-down
           ul.dropdown-menu
             li
-              a(href='#') Log Out
+              a(href='#')
+                i.fa.fa-cog.fa-fw
+                |  Settings
+            li.disabled
+              a(href='#')
+                i.fa.fa-close.fa-fw
+                |  Log Out
+    .col-md-1

@@ -1,0 +1,79 @@
+extends layout
+
+block content
+  #deleteAlertModal.modal.fade(role="dialog")
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h4.modal-title WARNING | IRREVERSIBLE
+        .modal-body
+          p Be advised: deleting a #{managementRel} is permanent.
+          p To confirm deletion type 'DELETE' in the box below
+        .modal-footer
+          button.btn.btn-danger(type='button' data-dismiss='modal') DELETE
+
+  h3 #{title}
+  .btn-group(role='group')
+    if managementRel == 'Form'
+      button.btn.disabled(type='button')
+        i.fa.fa-file-text.fa-fw
+        |  Form Management
+      a.btn.btn-default(role='button' href='/door-management')
+        i.fa.fa-building.fa-fw
+        |  Door Management
+      a.btn.btn-default(role='button' href='/user-management')
+        i.fa.fa-users.fa-fw
+        |  User Management
+    if managementRel == 'Door'
+      a.btn.btn-default(role='button' href='/form-management')
+        i.fa.fa-file-text.fa-fw
+        |  Form Management
+      button.btn.disabled(type='button')
+        i.fa.fa-building.fa-fw
+        |  Door Management
+      a.btn.btn-default(role='button' href='/user-management')
+        i.fa.fa-users.fa-fw
+        |  User Management
+    if managementRel == 'User'
+      a.btn.btn-default(role='button' href='/form-management')
+        i.fa.fa-file-text.fa-fw
+        |  Form Management
+      a.btn.btn-default(role='button' href='/door-management')
+        i.fa.fa-building.fa-fw
+        |  Door Management
+      button.btn.disabled(type='button')
+        i.fa.fa-users.fa-fw
+        |  User Management
+
+  h4 Current #{managementRel}s
+  table.table.table-hover.table-striped
+    tr
+      th.text-center.col-xs-5.col-md-5.vert-align #{firstField}
+      th.text-center.col-xs-3.col-md-3.vert-align #{secondField}
+      th.text-center.col-xs-2.col-md-2.vert-align #{thirdField}
+      th.text-center.col-xs-2.col-md-2.vert-align Delete #{managementRel}
+    each columnVal in columns.length ? columns : ['Error: No Columns']
+      tr
+        each rowVal in columnVal.length ? columnVal : ['Error: No Rows']
+          if rowVal == true
+            if managementRel == 'Door'
+              td.text-center.vert-align 
+                i.fa.fa-check
+            else
+              td.text-center.vert-align= rowVal
+          if rowVal == false
+            if managementRel == 'Door'
+              td.text-center.vert-align
+            else
+              td.text-center.vert-align= rowVal
+          if rowVal != false && rowVal != true 
+            td.text-center.vert-align= rowVal
+        td.text-center.vert-align
+          a.btn.btn-primary.btn-block(href='#')
+            i.fa.fa-eye
+        td.text-center.vert-align
+          button.btn.btn-danger.btn-block(type='button' data-toggle='modal' data-target='#deleteAlertModal')
+            i.fa.fa-trash-o
+  a.btn.btn-success.floatRight(href='#')
+    i.fa.fa-plus
+    |  Add New #{managementRel}

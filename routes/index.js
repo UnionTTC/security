@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
 })
 
 router.get('/form1', function (req, res) {
-  res.render('index', {
+  res.render('form1', {
     title: '1st Form',
     username: 'temp - no user'
   })
@@ -36,9 +36,59 @@ router.get('/incident-report', function (req, res) {
   })
 })
 
+router.get('/your-forms', function (req, res) {
+  res.render('index', {
+    title: 'Submitted Forms',
+    username: 'temp - no user'
+  })
+})
+
+router.get('/door-check', function (req, res) {
+  res.render('index', {
+    title: 'Door Check',
+    username: 'temp - no user'
+  })
+})
+
 router.get('/other-report', function (req, res) {
   res.render('index', {
     title: 'Other Report',
     username: 'temp - no user'
+  })
+})
+
+router.get('/door-management', function (req, res) {
+  res.render('management', {
+    title: 'Door Management',
+    username: 'temp - no user',
+    managementRel: 'Door',
+    firstField: 'Location',
+    secondField: 'Checked Tonight',
+    thirdField: 'View Logs', //remove?
+    columns: [['Prescott Main', true], ['Culver West', false], ['Krueger Main', true]]
+  })
+})
+
+router.get('/form-management', function (req, res) {
+  res.render('management', {
+    title: 'Form Management',
+    username: 'temp - no user',
+    managementRel: 'Form',
+    firstField: 'Name',
+    secondField: '# of Submissions',
+    thirdField: 'View Form',
+    columns: [['Form 1', 2], ['Form 2', 76], ['Form 3', 789], ['Incident Report', 235], ['Other Report', 63]]
+  })
+})
+
+router.get('/user-management', function (req, res) {
+  res.render('management', {
+    title: 'User Management',
+    username: 'temp - no user',
+    managementRel: 'User',
+    firstField: 'Student Name',
+    secondField: 'Hours per Week',
+    thirdField: 'View Assignments',
+    columns: [['James Clague', 24], ['Gabriel Flechas', 1], ['Ellen Burgeson', 9]]
   })
 })
