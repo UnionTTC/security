@@ -63,9 +63,9 @@ router.get('/door-management', function (req, res) {
     username: 'temp - no user',
     managementRel: 'Door',
     firstField: 'Location',
-    secondField: 'Was Checked Last Night',
-    thirdField: 'View Logs',
-    columns: [['Prescott Main', true], ['Culver West', false], ['Kreuger Main', true]]
+    secondField: 'Checked Tonight',
+    thirdField: 'View Logs', //remove?
+    columns: [['Prescott Main', true], ['Culver West', false], ['Krueger Main', true]]
   })
 })
 
@@ -76,8 +76,8 @@ router.get('/form-management', function (req, res) {
     managementRel: 'Form',
     firstField: 'Name',
     secondField: '# of Submissions',
-    thirdField: 'View Forms',
-    columns: [['Form 1', 2], ['Form 2', 76], ['Form 3', 789]]
+    thirdField: 'View Form',
+    columns: [['Form 1', 2], ['Form 2', 76], ['Form 3', 789], ['Incident Report', 235], ['Other Report', 63]]
   })
 })
 
