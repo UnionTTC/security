@@ -61,7 +61,11 @@ router.get('/door-management', function (req, res) {
   res.render('management', {
     title: 'Door Management',
     username: 'temp - no user',
-    managementRel: 'doors'
+    managementRel: 'Door',
+    firstField: 'Location',
+    secondField: 'Was Checked Last Night',
+    thirdField: 'View Logs',
+    columns: [['Prescott Main', true], ['Culver West', false], ['Kreuger Main', true]]
   })
 })
 
@@ -69,7 +73,11 @@ router.get('/form-management', function (req, res) {
   res.render('management', {
     title: 'Form Management',
     username: 'temp - no user',
-    managementRel: 'forms'
+    managementRel: 'Form',
+    firstField: 'Name',
+    secondField: '# of Submissions',
+    thirdField: 'View Forms',
+    columns: [['Form 1', 2], ['Form 2', 76], ['Form 3', 789]]
   })
 })
 
@@ -77,6 +85,10 @@ router.get('/user-management', function (req, res) {
   res.render('management', {
     title: 'User Management',
     username: 'temp - no user',
-    managementRel: 'users'
+    managementRel: 'User',
+    firstField: 'Student Name',
+    secondField: 'Hours per Week',
+    thirdField: 'View Assignments',
+    columns: [['James Clague', 24], ['Gabriel Flechas', 1], ['Ellen Burgeson', 9]]
   })
 })
