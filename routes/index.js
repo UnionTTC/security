@@ -58,6 +58,7 @@ router.get('/other-report', function (req, res) {
   })
 })
 
+//  first/second/thirdField: table headers for management
 router.get('/door-management', function (req, res) {
   res.render('management', {
     title: 'Door Management',
@@ -91,5 +92,12 @@ router.get('/user-management', function (req, res) {
     secondField: 'Hours per Week',
     thirdField: 'View Assignments',
     rows: [['James Clague', 24], ['Gabriel Flechas', 1], ['Keith Wade', 9], ['Joseph Smittick', 0]]
+  })
+})
+
+router.get('/user-settings', function (req, res) {
+  res.render('settings', {
+    title: 'Settings',
+    username: 'temp - no user'
   })
 })

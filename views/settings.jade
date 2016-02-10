@@ -1,0 +1,49 @@
+extends layout
+
+//-content
+block content
+  h2 #{title}
+  
+  h4 
+    strong Profile Settings
+    br
+    br
+    |Username
+    p.input-group
+      input.form-control(type='text' placeholder='Username')
+    |Password
+    p.input-group 
+      input.form-control(type='password' placeholder='Password')
+    |Email
+    p.input-group
+      input.form-control(type='text' placeholder='email@email.email')
+  br
+  h4
+    strong Notification Settings
+    br
+    br
+    |Emails
+    br
+    .btn-group(data-toggle='buttons')
+      label.btn.btn-primary.active
+        input#emailOption1(type='radio' name='options' autocomplete='off' checked)
+        |On
+      label.btn.btn-primary
+        input#emailOption2(type='radio' name='options' autocomplete='off')
+        |Off
+    br
+    br
+    |Text-Alerts
+    br
+    .btn-group(data-toggle='buttons')
+      label.btn.btn-primary
+        input#textOption1(type='radio' name='options' autocomplete='off')
+        |On
+      label.btn.btn-primary.active
+        input#textOption2(type='radio' name='options' autocomplete='off' checked)
+        |Off
+  br
+  br
+  a.btn.btn-success.floatRight(href='#')
+    i.fa.fa-plus
+    |  Submit #{managementRel}
