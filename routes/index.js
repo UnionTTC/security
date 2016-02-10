@@ -65,7 +65,7 @@ router.get('/door-management', function (req, res) {
     firstField: 'Location',
     secondField: 'Checked Tonight',
     thirdField: 'View Logs', //remove?
-    rows: [['Prescott Main', true], ['Culver West', false], ['Krueger Main', true]]
+    columns: [['Prescott Main', true], ['Culver West', false], ['Krueger Main', true]]
   })
 })
 
@@ -77,7 +77,7 @@ router.get('/form-management', function (req, res) {
     firstField: 'Name',
     secondField: '# of Submissions',
     thirdField: 'View Form',
-    rows: [['Form 1', 2], ['Form 2', 76], ['Form 3', 789], ['Incident Report', 235], ['Other Report', 63]]
+    columns: [['Form 1', 2], ['Form 2', 76], ['Form 3', 789], ['Incident Report', 235], ['Other Report', 63]]
   })
 })
 
@@ -89,6 +89,6 @@ router.get('/user-management', function (req, res) {
     firstField: 'Student Name',
     secondField: 'Hours per Week',
     thirdField: 'View Assignments',
-    rows: [['James Clague', 24], ['Gabriel Flechas', 1], ['Ellen Burgeson', 9]]
+    columns: [['James Clague', 24], ['Gabriel Flechas', 1], ['Ellen Burgeson', 9]]
   })
 })
