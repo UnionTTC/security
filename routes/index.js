@@ -4,7 +4,8 @@ var router = module.exports = express.Router()
 router.get('/', function (req, res) {
   res.render('index', {
     title: 'Home',
-    username: 'temp - no user'
+    username: 'temp - no user',
+    isAdmin: true
   })
 })
 
@@ -89,6 +90,6 @@ router.get('/user-management', function (req, res) {
     firstField: 'Student Name',
     secondField: 'Hours per Week',
     thirdField: 'View Assignments',
-    rows: [['James Clague', 24], ['Gabriel Flechas', 1], ['Ellen Burgeson', 9]]
+    rows: [['James Clague', 24], ['Gabriel Flechas', 1], ['Keith Wade', 9], ['Joseph Smittick', 0]]
   })
 })

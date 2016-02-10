@@ -57,24 +57,25 @@ nav.navbar.navbar-default.navbar-fixed-top
           input.form-control(type='text', placeholder='Search')
         button.btn.btn-default(type='submit') Search
       ul.nav.navbar-nav.navbar-right
-        li.dropdown
-          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button')
-            i.fa.fa-wrench.fa-fw
-            |Admin 
-            i.fa.fa-caret-down
-            ul.dropdown-menu
-              li
-                a(href='/form-management')
-                  i.fa.fa-file-text.fa-fw
-                  |  Manage Forms
-              li
-                a(href='/door-management')
-                  i.fa.fa-building.fa-fw
-                  |  Manage Doors
-              li
-                a(href='/user-management')
-                  i.fa.fa-users.fa-fw
-                  |  Manage Users
+        if isAdmin == true
+          li.dropdown
+            a.dropdown-toggle(href='#' data-toggle='dropdown' role='button')
+              i.fa.fa-wrench.fa-fw
+              |Admin 
+              i.fa.fa-caret-down
+              ul.dropdown-menu
+                li
+                  a(href='/form-management')
+                    i.fa.fa-file-text.fa-fw
+                    |  Manage Forms
+                li
+                  a(href='/door-management')
+                    i.fa.fa-building.fa-fw
+                    |  Manage Doors
+                li
+                  a(href='/user-management')
+                    i.fa.fa-users.fa-fw
+                    |  Manage Users
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button')
             i.fa.fa-user.fa-fw
