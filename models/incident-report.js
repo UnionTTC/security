@@ -12,7 +12,7 @@ var incidentSchema = new mongoose.Schema({
     safety: Boolean,
     injury: Boolean,
     suspicion: Boolean,
-    lostitem: Boolean,
+    lostItem: Boolean,
     theft: Boolean,
     parking: Boolean,
     trespassing: Boolean,
@@ -25,7 +25,7 @@ var incidentSchema = new mongoose.Schema({
       type: String,
       validate: {
         validator: function (v) {
-          return /[victim]|[witness]|[suspect]|[other]/.test(v)
+          return /victim|witness|suspect|other/.test(v)
         },
         message: 'Validator failed for path `{PATH}` with value `{VALUE}`'
       }
