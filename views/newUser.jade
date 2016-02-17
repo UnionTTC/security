@@ -1,0 +1,30 @@
+extends layout
+
+//-content
+block content
+  h3 #{title}
+  form.form-horizontal(action="/")     
+    div.form-group
+      label.col-sm-3.control-label(for="username") Username:
+      div.col-sm-9.form-inline
+          input#username.form-control.formField(placeholder="Username")
+    div.form-group
+      label.col-sm-3.control-label(for="password") Password:
+      div.col-sm-9.form-inline
+          input#password.form-control.formField(placeholder="Password")
+    div.form-group
+      label.col-sm-3.control-label(for="email") Email:
+      div.col-sm-9.form-inline
+          input#email.form-control.formField(placeholder="email@email.email")
+    div.form-group
+      label.col-sm-3.control-label(for="phone") Phone Number:
+      div.col-sm-9.form-inline
+          input#phone.form-control.formField(placeholder="(123) 456 - 7890")
+    div.form-group
+      label.col-sm-3.control-label(for="longline") Longline:
+      div.col-sm-9
+        input#longline.form-control.formField(placeholder="longline")
+    div.form-group.floatRight
+      a.btn.btn-success(href='#')
+        i.fa.fa-plus
+          |  Add

@@ -67,6 +67,7 @@ router.get('/door-management', function (req, res) {
     firstField: 'Location',
     secondField: 'Checked Tonight',
     thirdField: 'View Logs', //remove?
+    addNewPath: '/add-new-door',
     rows: [['Prescott Main', true], ['Culver West', false], ['Krueger Main', true]]
   })
 })
@@ -79,6 +80,7 @@ router.get('/form-management', function (req, res) {
     firstField: 'Name',
     secondField: '# of Submissions',
     thirdField: 'View Form',
+    addNewPath: '/add-new-form',
     rows: [['Form 1', 2], ['Form 2', 76], ['Form 3', 789], ['Incident Report', 235], ['Other Report', 63]]
   })
 })
@@ -89,9 +91,31 @@ router.get('/user-management', function (req, res) {
     username: 'temp - no user',
     managementRel: 'User',
     firstField: 'Student Name',
-    secondField: 'Hours per Week',
-    thirdField: 'View Assignments',
-    rows: [['James Clague', 24], ['Gabriel Flechas', 1], ['Keith Wade', 9], ['Joseph Smittick', 0]]
+    secondField: 'Permission Level',
+    thirdField: 'Review Assignments',
+    addNewPath: '/add-new-user',
+    rows: [['James Clague', 'Head of Security'], ['Gabriel Flechas', 'Admin'], ['Keith Wade', 'Head Officer'], ['Joseph Smittick', 'Officer']]
+  })
+})
+
+router.get('/add-new-user', function (req, res) {
+  res.render('newUser', {
+    title: 'Add New User',
+    username: 'temp - no user'
+  })
+})
+
+router.get('/add-new-form', function (req, res) {
+  res.render('newUser', {
+    title: 'Add New Form',
+    username: 'temp - no user'
+  })
+})
+
+router.get('/add-new-door', function (req, res) {
+  res.render('newUser', {
+    title: 'Add New Door',
+    username: 'temp - no user'
   })
 })
 
