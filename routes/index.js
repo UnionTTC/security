@@ -106,14 +106,14 @@ router.get('/add-new-user', function (req, res) {
 })
 
 router.get('/add-new-form', function (req, res) {
-  res.render('newUser', {
+  res.render('newForm', {
     title: 'Add New Form',
     username: 'temp - no user'
   })
 })
 
 router.get('/add-new-door', function (req, res) {
-  res.render('newUser', {
+  res.render('newDoor', {
     title: 'Add New Door',
     username: 'temp - no user'
   })
