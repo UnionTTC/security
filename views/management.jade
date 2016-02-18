@@ -1,8 +1,8 @@
 extends layout
 
-//-content
+//  -content
 block content
-  //-the modal popup for deletion
+  //  -the modal popup for deletion
   #deleteAlertModal.modal.fade(role="dialog")
     .modal-dialog
       .modal-content
@@ -17,11 +17,11 @@ block content
           button.btn(type='button' data-dismiss='modal') CANCEL
           a.btn.btn-danger(type='button' data-dismiss='modal' href='#') DELETE
 
-  //-which management page you are on
+  //      -which management page you are on
   h3 #{title}
   .btn-group(role='group')
-    //-if stacks for showing the 3 management navigation buttons
-    //-on form management page
+    //  -if stacks for showing the 3 management navigation buttons
+    //  -on form management page
     if managementRel == 'Form'
       button.btn.disabled(type='button')
         i.fa.fa-file-text.fa-fw
@@ -32,7 +32,7 @@ block content
       a.btn.btn-default(role='button' href='/user-management')
         i.fa.fa-users.fa-fw
         |  User Management
-    //-on door management page
+    //  -on door management page
     if managementRel == 'Door'
       a.btn.btn-default(role='button' href='/form-management')
         i.fa.fa-file-text.fa-fw
@@ -43,7 +43,7 @@ block content
       a.btn.btn-default(role='button' href='/user-management')
         i.fa.fa-users.fa-fw
         |  User Management
-    //-on user management page
+    //  -on user management page
     if managementRel == 'User'
       a.btn.btn-default(role='button' href='/form-management')
         i.fa.fa-file-text.fa-fw
@@ -56,41 +56,41 @@ block content
         |  User Management
         
   h4 Current #{managementRel}s
-  //-the table formatter
+  //  -the table formatter
   table.table.table-hover.table-striped
     tr
-      //-headers
+      //  -headers
       th.text-center.col-xs-5.col-md-5.vert-align #{firstField}
       th.text-center.col-xs-3.col-md-3.vert-align #{secondField}
       th.text-center.col-xs-2.col-md-2.vert-align #{thirdField}
       th.text-center.col-xs-2.col-md-2.vert-align Delete #{managementRel}
-    //-row by row do:
+    //  -row by row do:
     each rowVal in rows.length ? rows : ['Error: No Rows']
       tr
-        //-column by column in each row do:
+        //  -column by column in each row do:
         each columnVal in rowVal.length ? rowVal : ['Error: No Columns']
-          //-filter out booleans from ints
+          //  -filter out booleans from ints
           if columnVal == true 
-            //-was either true or 1
+            //  -was either true or 1
             if managementRel == 'Door'
-              //-is a checkmark because on the door page
+              //  -is a checkmark because on the door page
               td.text-center.vert-align
                 i.fa.fa-check
             else
-              //-is not a checkmark because not the door page
+              //  -is not a checkmark because not the door page
               td.text-center.vert-align= columnVal
           if columnVal == false
-            //-was either false or 0
+            //  -was either false or 0
             if managementRel == 'Door'
-              //-is blank because on door page
+              //  -is blank because on door page
               td.text-center.vert-align
             else
-              //-is not blank because not on door page
+              //  -is not blank because not on door page
               td.text-center.vert-align= columnVal
-          //-as long as it is neither true/false nor 0/1
+          //  -as long as it is neither true/false nor 0/1
           if columnVal != false && columnVal != true 
             td.text-center.vert-align= columnVal
-        //-add view and delete buttons for all rows
+        //  -add view and delete buttons for all rows
         td.text-center.vert-align
           a.btn.btn-primary.btn-block(href='#')
             i.fa.fa-eye
@@ -99,7 +99,7 @@ block content
           button.btn.btn-danger.btn-block(type='button' data-toggle='modal' data-target='#deleteAlertModal' data-thisRow=rowVal)
             i.fa.fa-trash-o
             |  Delete
-  //-the add button
+  //        -the add button
   a.btn.btn-success.floatRight(href=addNewPath)
     i.fa.fa-plus
     |  Add New #{managementRel}

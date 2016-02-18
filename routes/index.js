@@ -66,7 +66,7 @@ router.get('/door-management', function (req, res) {
     managementRel: 'Door',
     firstField: 'Location',
     secondField: 'Checked Tonight',
-    thirdField: 'View Logs', //remove?
+    thirdField: 'View Logs', // remove?
     addNewPath: '/add-new-door',
     rows: [['Prescott Main', true], ['Culver West', false], ['Krueger Main', true]]
   })
