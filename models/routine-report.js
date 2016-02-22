@@ -5,6 +5,7 @@ var routineSchema = new mongoose.Schema({
   time: String,
   date: String,
   building: String,
+  room: String,
   issue: Boolean, // locked unlocked occupied
   notes: String
 })
