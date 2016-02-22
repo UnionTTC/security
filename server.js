@@ -3,6 +3,15 @@ var express = require('express')
 var app = express()
 var routes = require('./routes/')
 
+var mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost/security')
+
+var db = mongoose.connection
+db.on('error', console.error.bind(console, 'connection error:'))
+db.once('open', function (callback) {
+  console.log('[mongoose] connected to mongodb://localhost/security')
+})
+
 app.set('view engine', 'jade')
 app.set('port', process.env.PORT || 3000)
 app.set('ip', process.env.IP || 'localhost')
