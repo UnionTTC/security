@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h3 #{title}
+  form.form-horizontal(action="/")     
+    div.form-group
+      label.col-sm-2.control-label(for="employeeInfo") Employee Info:
+      div.col-sm-10.form-inline
+          input#employeeInfo.form-control.formField(placeholder="First Name")
+          input.form-control.formField(placeholder="Last Name")
+    div.form-group
+      label.col-sm-2.control-label(for="studentInfo") Student Info:
+      div.col-sm-10.form-inline
+          input#studentInfo.form-control.formField(placeholder="First Name")
+          input.form-control.formField(placeholder="Last Name")
+    div.form-group
+      label.col-sm-2.control-label(for="longline") Longline:
+      div.col-sm-10
+        input#longline.form-control.formField(placeholder="longline")
+    div.form-group.floatRight
+      input.btn(type="submit" value="Submit")

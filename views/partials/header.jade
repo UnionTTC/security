@@ -1,53 +1,92 @@
 nav.navbar.navbar-default.navbar-fixed-top
-  .container
+  .container-fluid
+
     .navbar-header
-      button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-collapse' aria-expanded='false')
+      button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-collapse')
         span.sr-only Toggle navigation
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='#') #{sitename}
+      ul.nav.navbar-nav
+        li.active
+          a.navbar-brand(href='/') #{sitename}
+            span.sr-only (current)
 
     #navbar-collapse.collapse.navbar-collapse
       ul.nav.navbar-nav
-        li.active
-          a(href='#') Link
-            span.sr-only (current)
-        li
-          a(href='#') Link
         li.dropdown
-          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Dropdown 
+          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
+            i.fa.fa-file-text-o.fa-fw
+            |Forms 
             i.fa.fa-caret-down
             ul.dropdown-menu
               li
-                a(href='#') Action
+                a(href='/form1')
+                  i.fa.fa-file-o.fa-fw
+                  |  Security Form 1
               li
-                a(href='#') Another action
+                a(href='/form2')
+                  i.fa.fa-file-o.fa-fw
+                  |  Security Form 2
               li
-                a(href='#') Something else here
+                a(href='/form3')
+                  i.fa.fa-file-o.fa-fw
+                  |  Security Form 3
               li.divider(role='separator')
               li
-                a(href='#') Separated link
+                a(href='/incident-report')
+                  i.fa.fa-file-o.fa-fw
+                  |  Incident Report
               li.divider(role='separator')
               li
-                a(href='#') One more separated link
+                a(href='/other-report')
+                  i.fa.fa-file-o.fa-fw
+                  |  Other Form
+        li
+          a(href='/your-forms')
+            i.fa.fa-file-o.fa-fw
+            |Your Submissions
+        li
+          a(href='/door-check')
+            i.fa.fa-building-o.fa-fw
+            |Door Check
       form.navbar-form.navbar-left(role='search')
         .form-group
+          span.form-group-addon
+            i.fa.fa-search.fa-fw
           input.form-control(type='text', placeholder='Search')
-        button.btn.btn-default(type='submit') Submit
+        button.btn.btn-default(type='submit') Search
       ul.nav.navbar-nav.navbar-right
-        li
-          a(href='#') Link
+        if isAdmin == true
+          li.dropdown
+            a.dropdown-toggle(href='#' data-toggle='dropdown' role='button')
+              i.fa.fa-wrench.fa-fw
+              |Admin 
+              i.fa.fa-caret-down
+              ul.dropdown-menu
+                li
+                  a(href='/form-management')
+                    i.fa.fa-file-text.fa-fw
+                    |  Manage Forms
+                li
+                  a(href='/door-management')
+                    i.fa.fa-building.fa-fw
+                    |  Manage Doors
+                li
+                  a(href='/user-management')
+                    i.fa.fa-users.fa-fw
+                    |  Manage Users
         li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button' aria-haspopup='true' aria-expanded='false') Dropdown 
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button')
+            i.fa.fa-user.fa-fw
+            |#{username} 
             i.fa.fa-caret-down
           ul.dropdown-menu
             li
-              a(href='#') Action
-            li
-              a(href='#') Another action
-            li
-              a(href='#') Something else here
-            li.divider(role='separator')
-            li
-              a(href='#') Separated link
+              a(href='/user-settings')
+                i.fa.fa-cog.fa-fw
+                |  Settings
+            li.disabled
+              a(href='#')
+                i.fa.fa-close.fa-fw
+                |  Log Out

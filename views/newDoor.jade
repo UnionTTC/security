@@ -1,0 +1,23 @@
+extends layout
+
+//  -content
+block content
+  h3 #{title}
+  form.form-horizontal(action="/")     
+    .form-group
+      label.col-sm-3.control-label(for="location") Location:
+      .col-sm-9.form-inline
+          input#location.form-control.formField(placeholder="e.g. DB South Main")
+    .form-group(data-toggle='buttons')
+      label.col-sm-3.control-label Check Nightly:
+      div.col-sm-9.form-inline.btn-group
+        label.btn.btn-primary.active
+          input#emailOption1(type='radio' name='options' autocomplete='off' checked)
+          |On
+        label.btn.btn-primary
+          input#emailOption2(type='radio' name='options' autocomplete='off')
+          |Off
+    .form-group.floatRight
+      a.btn.btn-success(href='#')
+        i.fa.fa-plus
+          |  Add
