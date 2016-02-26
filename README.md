@@ -7,6 +7,13 @@
 
 Application to track campus security data
 
+## Installation
+
+1. `npm install`
+2. `mkdir data`
+3. `./mongod`
+4. `node server.js`
+
 ## Technologies and Frameworks
 
 * [Node](https://github.com/nodejs/node#readme)
@@ -14,3 +21,4 @@ Application to track campus security data
 * [Jade](https://github.com/pugjs/jade#readme)
 * [Bootstrap](https://getbootstrap.com)
 * [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+* [Mongoose](http://mongoosejs.com/)
