@@ -19,8 +19,8 @@
   "homepage": "https://github.com/UnionTTC/security#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "jade": "^1.11.0",
-    "mongoose": "^4.4.2"
+    "mongoose": "^4.4.12",
+    "pug": "^2.0.0-alpha3"
   },
   "devDependencies": {
     "standard": "^5.4.1"
