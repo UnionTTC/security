@@ -12,7 +12,7 @@ db.once('open', function (callback) {
   console.log('[mongoose] connected to mongodb://localhost/security')
 })
 
-app.set('view engine', 'jade')
+app.set('view engine', 'pug')
 app.set('port', process.env.PORT || 3000)
 app.set('ip', process.env.IP || 'localhost')
 
